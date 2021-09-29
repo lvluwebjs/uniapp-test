@@ -1,0 +1,1 @@
+<view>{{'我是子组件接收父组件传过来的值\n\t'+msg+''}}<button data-event-opts="{{[['tap',[['childmsg',['$0'],['ms']]]]]}}" bindtap="__e">我是子组件</button></view>

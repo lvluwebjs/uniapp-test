@@ -1,0 +1,7 @@
+{
+  "navigationBarBackgroundColor": "#FF0000",
+  "navigationBarTitleText": "主页",
+  "usingComponents": {
+    "child": "/components/child"
+  }
+}

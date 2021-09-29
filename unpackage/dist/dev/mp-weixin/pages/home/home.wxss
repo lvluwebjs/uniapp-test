@@ -1,0 +1,32 @@
+
+.home {
+
+	box-sizing: border-box;
+	/* width: 750rpx; */
+	padding: 20rpx 20rpx;
+}
+
+/* .home input {
+	width: 700rpx;
+	height: 70rpx;
+	border: 1px solid black;
+	line-height: 70rpx;
+	border-radius: 10rpx;
+} */
+.contianer{
+	white-space:nowrap
+}
+.box {
+	display: inline-block;
+	width: 145rpx;
+	text-align: center;
+}
+.box image {
+	width: 80rpx;
+	height: 80rpx;
+}
+.box view {
+	font-size: 26rpx;
+	color: #808080;
+}
+

@@ -1,0 +1,67 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarBackgroundColor": "#FF0000",
+				"navigationBarTitleText": "主页"
+			}
+		},
+		 {
+			"path": "pages/cats/cats",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/buys/buys",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/users/users",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	],
+	"tabBar": {
+		"color": "#333",
+		"selectedColor": "#FF0000",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/home/home",
+			"iconPath": "static/image/home.png",
+			"selectedIconPath": "static/image/home-s.png",
+			"text": "主页"
+		}, {
+			"pagePath": "pages/cats/cats",
+			"iconPath": "static/image/cat.png",
+			"selectedIconPath": "static/image/cat-s.png",
+			"text": "分类"
+		},{
+			"pagePath": "pages/buys/buys",
+			"iconPath": "static/image/buy.png",
+			"selectedIconPath": "static/image/buy-s.png",
+			"text": "购物"
+		},{
+			"pagePath": "pages/users/users",
+			"iconPath": "static/image/user-s.png",
+			"selectedIconPath": "static/image/user.png",
+			"text": "用户"
+		}]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+
+}
