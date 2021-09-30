@@ -8,106 +8,17 @@
 			</view>
 		</view>
 		<Child :msg="msg" @childEvent="childEvent"></Child> -->
-		<scroll-view scroll-x="true" class="contianer">
-			
-				<view class='box'>
-					<image
-						src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/175540/24/19329/6842/60ec0b0aEf35f7384/ec560dbf9b82b90b.png!q70.jpg.dpg"
-						mode=""></image>
-					<view class="">
-						京东超市
-					</view>
-				</view>
-				<view class='box'>
-					<image
-						src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/178015/31/13828/6862/60ec0c04Ee2fd63ac/ccf74d805a059a44.png!q70.jpg.dpg"
-						mode="widthFix"></image>
-					<view class="">
-						数码电器
-					</view>
-				</view>
-				<view class='box'>
-					<image
-						src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/41867/2/15966/7116/60ec0e0dE9f50d596/758babcb4f911bf4.png!q70.jpg.dpg"
-						mode="widthFix"></image>
-					<view class="">
-						京东服饰
-					</view>
-				</view>
-				<view class='box'>
-					<image
-						src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/177902/16/13776/5658/60ec0e71E801087f2/a0d5a68bf1461e6d.png!q70.jpg.dpg"
-						mode="widthFix"></image>
-					<view class="">
-						京东生鲜
-					</view>
-				</view>
-				<view class='box'>
-					<image
-						src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/196472/7/12807/7127/60ec0ea3Efe11835b/37c65625d94cae75.png!q70.jpg.dpg"
-						mode="widthFix"></image>
-					<view class="">
-						京东到家
-					</view>
-				</view>
-				<view class='box'>
-					<image
-						src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/191060/24/12861/6818/60ec11f2E67cf5ee6/c264378678b3cd96.png!q70.jpg.dpg"
-						mode="widthFix"></image>
-					<view class="">
-						京东国际
-					</view>
-				</view>
-				
-			<view class='box'>
-				<image
-					src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/175540/24/19329/6842/60ec0b0aEf35f7384/ec560dbf9b82b90b.png!q70.jpg.dpg"
-					mode=""></image>
+		<!-- <scroll-view scroll-x="true" @scrolltoupper="lefttop" class="contianer" @scrolltolower="rightbottom"
+			@scroll="scrollview" scroll-with-animation="true" scroll-into-view="{{intoView}}">
+
+			<view class='box' v-for="(item,index) in listArr" @click="scrollturn(index)" :key="index">
+				<image :src="item.imgurl" mode="widthFix"></image>
 				<view class="">
-					京东超市
+					{{item.title}}
 				</view>
 			</view>
-			<view class='box'>
-				<image
-					src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/178015/31/13828/6862/60ec0c04Ee2fd63ac/ccf74d805a059a44.png!q70.jpg.dpg"
-					mode="widthFix"></image>
-				<view class="">
-					数码电器
-				</view>
-			</view>
-			<view class='box'>
-				<image
-					src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/41867/2/15966/7116/60ec0e0dE9f50d596/758babcb4f911bf4.png!q70.jpg.dpg"
-					mode="widthFix"></image>
-				<view class="">
-					京东服饰
-				</view>
-			</view>
-			<view class='box'>
-				<image
-					src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/177902/16/13776/5658/60ec0e71E801087f2/a0d5a68bf1461e6d.png!q70.jpg.dpg"
-					mode="widthFix"></image>
-				<view class="">
-					京东生鲜
-				</view>
-			</view>
-			<view class='box'>
-				<image
-					src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/196472/7/12807/7127/60ec0ea3Efe11835b/37c65625d94cae75.png!q70.jpg.dpg"
-					mode="widthFix"></image>
-				<view class="">
-					京东到家
-				</view>
-			</view>
-			<view class='box'>
-				<image
-					src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/191060/24/12861/6818/60ec11f2E67cf5ee6/c264378678b3cd96.png!q70.jpg.dpg"
-					mode="widthFix"></image>
-				<view class="">
-					京东国际
-				</view>
-			</view>
-		</scroll-view>
+
+		</scroll-view> -->
 	</view>
 </template>
 
@@ -117,19 +28,63 @@
 		data() {
 			return {
 				msg: '',
-				listArr: []
+				listArr: [{
+					title: "京东超市",
+					imgurl: "https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/175540/24/19329/6842/60ec0b0aEf35f7384/ec560dbf9b82b90b.png!q70.jpg.dpg"
+				}, {
+					title: "京东超市",
+					imgurl: "https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/175540/24/19329/6842/60ec0b0aEf35f7384/ec560dbf9b82b90b.png!q70.jpg.dpg"
+				}, {
+					title: "京东超市",
+					imgurl: "https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/175540/24/19329/6842/60ec0b0aEf35f7384/ec560dbf9b82b90b.png!q70.jpg.dpg"
+				}, {
+					title: "京东超市",
+					imgurl: "https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/175540/24/19329/6842/60ec0b0aEf35f7384/ec560dbf9b82b90b.png!q70.jpg.dpg"
+				}, {
+					title: "京东超市",
+					imgurl: "https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/175540/24/19329/6842/60ec0b0aEf35f7384/ec560dbf9b82b90b.png!q70.jpg.dpg"
+				}, {
+					title: "京东超市",
+					imgurl: "https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/175540/24/19329/6842/60ec0b0aEf35f7384/ec560dbf9b82b90b.png!q70.jpg.dpg"
+				}, {
+					title: "京东超市",
+					imgurl: "https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/175540/24/19329/6842/60ec0b0aEf35f7384/ec560dbf9b82b90b.png!q70.jpg.dpg"
+				}, {
+					title: "京东超市",
+					imgurl: "https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/175540/24/19329/6842/60ec0b0aEf35f7384/ec560dbf9b82b90b.png!q70.jpg.dpg"
+				}, {
+					title: "京东超市",
+					imgurl: "https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/175540/24/19329/6842/60ec0b0aEf35f7384/ec560dbf9b82b90b.png!q70.jpg.dpg"
+				}],
+				intoView: '',
+				ids: null
 			}
 		},
 		components: {
 			Child
 		},
 		methods: {
-			btn() {
-				this.listArr.push(this.msg)
-				// this.msg = ''
-			},
+			// btn() {
+			// 	this.listArr.push(this.msg)
+			// 	// this.msg = ''
+			// },
 			childEvent(e) {
 				console.log(e)
+			},
+			rightbottom() {
+				// console.log('滚动到底部/右边，会触发 scrolltolower 事件')
+			},
+			lefttop() {
+				// console.log('滚动到顶部/左边，会触发 scrolltoupper 事件')
+			},
+			scrollview() {
+
+				// console.log('滚动时触发，event.detail = {scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY}')
+			},
+			scrollturn(index) {
+				this.intoView = "id" + index;
+				console.log(this.intoView)
+				
 			}
 		}
 	}
@@ -151,8 +106,8 @@
 		border-radius: 10rpx;
 	} */
 
-	.contianer{
-		white-space:nowrap
+	.contianer {
+		white-space: nowrap
 	}
 
 	.box {

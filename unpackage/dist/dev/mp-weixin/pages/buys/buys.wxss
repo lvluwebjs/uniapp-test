@@ -1,0 +1,21 @@
+
+.ld.data-v-f0576db4 {
+	display: flex;
+}
+.left.data-v-f0576db4 {
+	width: 100px;
+	border: 1px solid red;
+}
+.right.data-v-f0576db4 {
+	flex: 1;
+	border: 1px solid red;
+}
+.title.data-v-f0576db4 {
+	font-size: 20px;
+	font-weight: bold;
+	background-color: pink;
+}
+.active.data-v-f0576db4 {
+	background-color: red;
+}
+

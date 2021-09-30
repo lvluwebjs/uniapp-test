@@ -136,96 +136,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var Child = function Child() {__webpack_require__.e(/*! require.ensure | components/child */ "components/child").then((function () {return resolve(__webpack_require__(/*! ../../components/child.vue */ 38));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var Child = function Child() {__webpack_require__.e(/*! require.ensure | components/child */ "components/child").then((function () {return resolve(__webpack_require__(/*! ../../components/child.vue */ 40));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -255,19 +166,63 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   data: function data() {
     return {
       msg: '',
-      listArr: [] };
+      listArr: [{
+        title: "京东超市",
+        imgurl: "https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/175540/24/19329/6842/60ec0b0aEf35f7384/ec560dbf9b82b90b.png!q70.jpg.dpg" },
+      {
+        title: "京东超市",
+        imgurl: "https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/175540/24/19329/6842/60ec0b0aEf35f7384/ec560dbf9b82b90b.png!q70.jpg.dpg" },
+      {
+        title: "京东超市",
+        imgurl: "https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/175540/24/19329/6842/60ec0b0aEf35f7384/ec560dbf9b82b90b.png!q70.jpg.dpg" },
+      {
+        title: "京东超市",
+        imgurl: "https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/175540/24/19329/6842/60ec0b0aEf35f7384/ec560dbf9b82b90b.png!q70.jpg.dpg" },
+      {
+        title: "京东超市",
+        imgurl: "https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/175540/24/19329/6842/60ec0b0aEf35f7384/ec560dbf9b82b90b.png!q70.jpg.dpg" },
+      {
+        title: "京东超市",
+        imgurl: "https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/175540/24/19329/6842/60ec0b0aEf35f7384/ec560dbf9b82b90b.png!q70.jpg.dpg" },
+      {
+        title: "京东超市",
+        imgurl: "https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/175540/24/19329/6842/60ec0b0aEf35f7384/ec560dbf9b82b90b.png!q70.jpg.dpg" },
+      {
+        title: "京东超市",
+        imgurl: "https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/175540/24/19329/6842/60ec0b0aEf35f7384/ec560dbf9b82b90b.png!q70.jpg.dpg" },
+      {
+        title: "京东超市",
+        imgurl: "https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/175540/24/19329/6842/60ec0b0aEf35f7384/ec560dbf9b82b90b.png!q70.jpg.dpg" }],
+
+      intoView: '',
+      ids: null };
 
   },
   components: {
     Child: Child },
 
   methods: {
-    btn: function btn() {
-      this.listArr.push(this.msg);
-      // this.msg = ''
-    },
+    // btn() {
+    // 	this.listArr.push(this.msg)
+    // 	// this.msg = ''
+    // },
     childEvent: function childEvent(e) {
       console.log(e);
+    },
+    rightbottom: function rightbottom() {
+      // console.log('滚动到底部/右边，会触发 scrolltolower 事件')
+    },
+    lefttop: function lefttop() {
+      // console.log('滚动到顶部/左边，会触发 scrolltoupper 事件')
+    },
+    scrollview: function scrollview() {
+
+      // console.log('滚动时触发，event.detail = {scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY}')
+    },
+    scrollturn: function scrollturn(index) {
+      this.intoView = "id" + index;
+      console.log(this.intoView);
+
     } } };exports.default = _default;
 
 /***/ }),

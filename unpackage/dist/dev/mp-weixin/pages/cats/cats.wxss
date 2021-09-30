@@ -1,0 +1,32 @@
+
+.scroll-view-box {
+	/* 这个设置就能隐藏滚动条*/
+	overflow: hidden;
+	height: 60rpx;
+}
+.box {
+	white-space: nowrap;
+	height: 80rpx;
+	margin-bottom: 30rpx;
+	text-align: center;
+	margin: 10rpx;
+}
+.item_title {
+	display: inline-block;
+	width: 140rpx;
+	text-align: center;
+	color: #C0C0C0;
+	font-size: 35rpx;
+}
+.swiper-box {}
+.swiper-item {
+	color: red;
+	font-size: 70rpx;
+	text-align: center;
+}
+.active {
+	font-size: 40rpx;
+	color: #007AFF;
+	font-weight: bold;
+}
+
