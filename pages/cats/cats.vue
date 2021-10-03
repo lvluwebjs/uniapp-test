@@ -4,7 +4,7 @@
 		它的高度小于scroll-view的高度，达到隐藏了滚动条的效果。 -->
 		<view class="scroll-view-box">
 			<scroll-view class="box" :scroll-left="offsetLeft" scroll-x="true" scroll-with-animation="true"
-				:scroll-into-view="intoindex">
+				>
 				<view @click="handleClick($event,index)" v-for="(item,index) in content" :key="item.id"
 					class="item_title" :class="[currentIndex === index ? 'active':'']">
 					{{item.title}}
@@ -13,35 +13,8 @@
 		</view>
 
 		<swiper class="swiper-box" :current="currentTab" @change="currentChange">
-			<swiper-item>
-				<view class="swiper-item">1</view>
-			</swiper-item>
-			<swiper-item>
-				<view class="swiper-item">2</view>
-			</swiper-item>
-			<swiper-item>
-				<view class="swiper-item">3</view>
-			</swiper-item>
-			<swiper-item>
-				<view class="swiper-item">4</view>
-			</swiper-item>
-			<swiper-item>
-				<view class="swiper-item">5</view>
-			</swiper-item>
-			<swiper-item>
-				<view class="swiper-item">6</view>
-			</swiper-item>
-			<swiper-item>
-				<view class="swiper-item">7</view>
-			</swiper-item>
-			<swiper-item>
-				<view class="swiper-item">8</view>
-			</swiper-item>
-			<swiper-item>
-				<view class="swiper-item">9</view>
-			</swiper-item>
-			<swiper-item>
-				<view class="swiper-item">10</view>
+			<swiper-item class="swiper-item" v-for="itemNum in numList">
+				{{itemNum}}
 			</swiper-item>
 
 		</swiper>
@@ -52,6 +25,7 @@
 	export default {
 		data() {
 			return {
+				numList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 				content: [{
 					id: 0,
 					title: "关注"
@@ -83,8 +57,7 @@
 					id: 9,
 					title: "西甲"
 				}, ],
-				intoindex: '',
-				num: 0, //动态模拟需要跳到的位置
+				moveWidth: 0,
 				currentIndex: 0,
 				currentTab: 0,
 				offsetLeft: 0,
@@ -94,15 +67,23 @@
 		created() {
 
 		},
+		onLoad() {
+			uni.getSystemInfo({
+				success: (res) => {
+					this.moveWidth = res.windowWidth
+				}
+			})
+		},
 		methods: {
 			handleClick(evt, index) {
 				this.currentIndex = index;
 				this.currentTab = index;
-				this.offsetLeft = evt.currentTarget.offsetLeft - 150;
+                this.offsetLeft = (index-2) * this.moveWidth / 5;
+				console.log(this.offsetLeft)
 			},
 			currentChange(e) {
 				this.currentIndex = e.detail.current;
-				this.intoindex = 'vid' + e.detail.current
+                this.offsetLeft = (e.detail.current-2) * this.moveWidth / 5;
 			}
 		},
 		updated() {
@@ -112,6 +93,18 @@
 </script>
 
 <style>
+	html,
+	body {
+		width: 100%;
+		height: 100%;
+	}
+
+	.content {
+		width: 100%;
+		height: 100%;
+
+	}
+
 	.scroll-view-box {
 		/* 这个设置就能隐藏滚动条*/
 		overflow: hidden;
@@ -119,29 +112,37 @@
 	}
 
 	.box {
-		white-space: nowrap;
 		height: 80rpx;
-		margin-bottom: 30rpx;
-		text-align: center;
-		margin: 10rpx;
+		width: 100%;
+		box-sizing: border-box;
+		overflow: hidden;
+		line-height: 80rpx;
+		background: #f7f7f7;
+		font-size: 16px;
+		white-space: nowrap;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 99;
 	}
 
 
 
 	.item_title {
+		width: 20%;
 		display: inline-block;
-		width: 140rpx;
 		text-align: center;
-		color: #C0C0C0;
-		font-size: 35rpx;
 	}
 
-	.swiper-box {}
+	.swiper-box {
+		background: greenyellow;
+		padding-top: 80rpx;
+		height: 100%;
+		box-sizing: border-box;
+	}
 
 	.swiper-item {
-		color: red;
-		font-size: 70rpx;
-		text-align: center;
+		overflow-y: scroll;
 	}
 
 	.active {
